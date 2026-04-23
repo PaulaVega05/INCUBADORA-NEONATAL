@@ -36,9 +36,13 @@ En la Figura 2 se presenta el esquema del sistema electrónico implementado, don
 
 ### Diseño del sistema
 
-Adicionalmente, se consideró el diseño mecánico del sistema, incluyendo una estructura básica que simula el funcionamiento de una incubadora neonatal, utilizando materiales como carton-plástico y vinilo para representar la cabina, también se tuvo en cuenta el soporte de la celda de carga y la disposición de los componentes, buscando lograr una adecuada estabilidad, distribución del calor y medición del peso. Cabe resaltar que se trata de una simulación funcional, en la cual se procuró implementar el sistema de la mejor manera posible con los recursos disponibles.
+Adicionalmente, se consideró el diseño mecánico del sistema, incluyendo una estructura básica que simula el funcionamiento de una incubadora neonatal. Para su construcción se utilizaron materiales como cartón plast y vinilo, los cuales permitieron representar la cabina de forma sencilla, ligera y funcional. El diseño se planteó como una caja cerrada, buscando mantener condiciones internas controladas y facilitar la integración de los diferentes subsistemas.
 
-### Parte mecánica
+Dentro de esta estructura, también se tuvo en cuenta el soporte de la celda de carga y la disposición de los componentes electrónicos. En particular, la galga fue instalada de manera horizontal, fijando un extremo a un soporte inferior (palo de balsa) y el otro a la parte superior de la estructura, permitiendo que la deformación se genere al aplicar carga desde la tapa. Esta configuración se implementó con el objetivo de lograr una mejor transmisión de la fuerza hacia el sensor.
+
+Asimismo, se buscó garantizar una adecuada estabilidad mecánica, una distribución uniforme del calor y una correcta medición del peso. Sin embargo, debido a las limitaciones de materiales y montaje, el sistema de pesaje presentó dificultades en su funcionamiento, evidenciando la importancia de un diseño mecánico más preciso para este tipo de aplicaciones.
+
+Cabe resaltar que se trata de una simulación funcional, en la cual se procuró implementar el sistema de la mejor manera posible con los recursos disponibles.
 
 <img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/47047507-e59f-4b03-a149-65ed5fe5c0c2" />
 <img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/471d3b9c-870e-4f4f-92b8-9574f1076795" />
@@ -212,7 +216,7 @@ void loop() {
   delay(500);
 }
 ```
-
+En conclusión, aunque se implementó la estructura del sistema de medición de peso, este no logró operar correctamente en el prototipo, por lo que se plantea como trabajo futuro la revisión de conexiones, el montaje mecánico y el proceso de calibración para lograr un funcionamiento adecuado.
 
 
 ## Costos del sistema y comparación con soluciones comerciales
