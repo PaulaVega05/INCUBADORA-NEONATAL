@@ -5,10 +5,12 @@ Sara Damaris Vasquez Cardenas y Paula Andrea Vega Pardo
 Este proyecto consiste en el desarrollo de un prototipo de incubadora neonatal de bajo costo, diseñado para controlar variables básicas como la temperatura y el peso, utilizando un sistema basado en ESP32, sensores y actuadores electrónicos
 
 ## Procedimiento 
-- Diseño del sistema
+### Diseño del sistema
+  
 Primero se definieron las variables a controlar: Temperatura y peso, poteriormente se seleccionaron los componentes electrónicos necesarios como el ESP32, termistor, módulo HX711, relé, sistema de calefacción y gálga extensiométrica.
 
-- Conexión de hardware / Temperatura 
+#### Conexión de hardware / Temperatura 
+
 Para relaizar el montaje del controlador de temperatura, se hizo uso del siguiente circuito:
 
 <img width="855" height="426" alt="TEMP" src="https://github.com/user-attachments/assets/eac8b0c4-ed5c-436b-baba-283695897d28" />
