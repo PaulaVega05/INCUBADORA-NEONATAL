@@ -36,11 +36,12 @@ En la Figura 2 se presenta el esquema del sistema electrónico implementado, don
 
 ## Procedimiento 
 
-### Parte mecánica
 
 ### Diseño del sistema
 
-Primero se definieron las variables a controlar: Temperatura y peso, poteriormente se seleccionaron los componentes electrónicos necesarios como el ESP32, termistor, módulo HX711, relé, sistema de calefacción y gálga extensiométrica.
+Adicionalmente, se consideró el diseño mecánico del sistema, incluyendo una estructura básica que simula el funcionamiento de una incubadora neonatal, utilizando materiales como plástico o acetato para representar la cabina, también se tuvo en cuenta el soporte de la celda de carga y la disposición de los componentes, buscando lograr una adecuada estabilidad, distribución del calor y medición del peso. Cabe resaltar que se trata de una simulación funcional, en la cual se procuró implementar el sistema de la mejor manera posible con los recursos disponibles.
+
+### Parte mecánica
 
 #### Conexión de hardware / Temperatura 
 
@@ -143,7 +144,7 @@ De esta misma manera se permitió la visualización de la temperatura en forma r
 
 #### Conexión de hardware / Peso 
 
-#### Costos del sistema y comparación con soluciones comerciales
+## Costos del sistema y comparación con soluciones comerciales
 El sistema desarrollado presenta un costo considerablemente bajo en comparación con las incubadoras neonatales comerciales. A continuación, se detalla el costo aproximado de cada uno de los componentes utilizados en el prototipo:
 
 | Componente                         | Cantidad | Costo unitario (COP) |
