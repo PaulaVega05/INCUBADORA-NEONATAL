@@ -4,9 +4,42 @@ Sara Damaris Vasquez Cardenas y Paula Andrea Vega Pardo
 ## Descripción
 Este proyecto consiste en el desarrollo de un prototipo de incubadora neonatal de bajo costo, diseñado para controlar variables básicas como la temperatura y el peso, utilizando un sistema basado en ESP32, sensores y actuadores electrónicos
 
+## Marco teórico 
+### Partes externas / estructura
+Las incubadoras neonatales son equipos médicos diseñados para proporcionar un ambiente controlado que permita mantener condiciones óptimas para el desarrollo y estabilidad del recién nacido, especialmente en casos de prematuridad; estos sistemas están conformados por varios subsistemas que trabajan de manera integrada para garantizar el control térmico, la protección del neonato y el monitoreo continuo de sus condiciones.
+
+En cuanto a sus componentes principales de tipo estructural o externo, se destaca la cabina o cámara de incubación, la cual es un compartimiento cerrado generalmente fabricado en material transparente que permite el aislamiento térmico y la observación del neonato. Esta cabina incluye accesos o compuertas que facilitan la intervención médica sin alterar significativamente las condiciones internas e  incorpora un sistema de circulación de aire, encargado de distribuir de manera uniforme la temperatura en el interior y evitar gradientes térmicos.
+
+Adicionalmente, la estructura presenta elementos como la pared doble, que mejora el aislamiento térmico reduciendo la pérdida de calor hacia el exterior, y ojales o accesos adicionales, que permiten la conexión de equipos médicos o sondas sin comprometer el ambiente interno. En la parte inferior, se encuentra una bandeja o superficie de soporte, donde se ubica el neonato, muchas veces integrada con sistemas como balanza digital para el monitoreo del peso sin necesidad de retirarlo de la incubadora.
+
+Por otro lado, la incubadora cuenta con componentes funcionales externos como el depósito de agua para el sistema de humidificación, encargado de mantener niveles adecuados de humedad, y la estructura móvil con ruedas y frenos, que facilita el transporte seguro del equipo dentro del entorno hospitalario. También incorpora elementos de ergonomía como ajuste de altura mediante pedales y compartimientos o cajones, que permiten almacenar insumos médicos.
+
+Finalmente, en la parte superior o lateral se ubican los sistemas de visualización y monitoreo, como pantallas digitales o táctiles, donde se presentan en tiempo real las variables del sistema y se permite la interacción con los parámetros de control. 
+
+A continuación, en la Figura 1 se presentan las principales partes de una incubadora neonatal:
+
+<img width="402" height="226" alt="PARTEFUERA" src="https://github.com/user-attachments/assets/6579f636-2bcd-4945-aa37-0646dedbcb47" />
+
+### Parte eléctrica
+
+Las incubadoras cuentan con componentes eléctricos y funcionales que permiten la regulación activa de las condiciones internas. Entre ellos se encuentran los elementos calefactores, responsables de generar el calor necesario para mantener la temperatura adecuada, y los ventiladores, que permiten la correcta circulación del aire dentro de la cabina, asegurando una distribución homogénea del calor. Asimismo, el sistema incluye una entrada de aire con filtrado, que garantiza la renovación del aire sin introducir contaminantes al entorno del neonato.
+
+También forman parte de estos sistemas los mecanismos de control de humedad, los cuales emplean humidificadores que utilizan calentamiento del agua para generar vapor, permitiendo mantener niveles adecuados de humedad y reducir la pérdida de líquidos a través de la piel del neonato. De igual manera, se incorporan sistemas de control de oxígeno, que regulan el flujo proveniente de una fuente externa mediante válvulas y filtros, asegurando concentraciones adecuadas según las necesidades clínicas.
+
+Adicionalmente, estos sistemas están interconectados mediante módulos de control electrónico, los cuales reciben información de sensores como temperatura del aire, temperatura de la piel y concentración de oxígeno. Esta información es procesada para accionar los diferentes subsistemas, como el calefactor, el ventilador o el humidificador, permitiendo mantener condiciones estables dentro de la incubadora.
+
+Como se observa en la Figura 2, estos componentes eléctricos y funcionales trabajan de manera integrada mediante un esquema de control, donde la interacción entre sensores, actuadores y sistemas de regulación permite mantener un ambiente controlado y seguro para el neonato.
+
+En la Figura 2 se presenta el esquema del sistema electrónico implementado, donde se observa la interconexión entre sensores, controlador y actuadores:
+
+<img width="1181" height="685" alt="SESNSOR" src="https://github.com/user-attachments/assets/3841ae44-29f9-4905-aaab-38f4c3d7178c" />
+
 ## Procedimiento 
+
+### Parte mecánica
+
 ### Diseño del sistema
-  
+
 Primero se definieron las variables a controlar: Temperatura y peso, poteriormente se seleccionaron los componentes electrónicos necesarios como el ESP32, termistor, módulo HX711, relé, sistema de calefacción y gálga extensiométrica.
 
 #### Conexión de hardware / Temperatura 
@@ -107,6 +140,51 @@ void loop() {
 ```
 
 De esta misma manera se permitió la visualización de la temperatura en forma real mediante una pantalla OLED de 3 segmentos y se implemetaron dos LEDs comosistema de alerta sobre el estado de la incubadora, en caso de estar por encimma o debajo del rango de la temperatura ideal se enciende el led rojo y por el contrario al encontrarse en el rango se encenderá el led verde.
+
+#### Conexión de hardware / Peso 
+
+#### Costos del sistema y comparación con soluciones comerciales
+El sistema desarrollado presenta un costo considerablemente bajo en comparación con las incubadoras neonatales comerciales. A continuación, se detalla el costo aproximado de cada uno de los componentes utilizados en el prototipo:
+
+| Componente                         | Cantidad | Costo unitario (COP) |
+|----------------------------------|---------|----------------------|
+| ESP32                            | 1       | 35000                | 
+| Sensor de temperatura (NTC/DHT)  | 1       | 1500                 | 
+| Módulo HX711                     | 1       | 7000                 | 
+| Pantalla OLED                    | 1       | 20000                | 
+| Módulo relé                      | 2       | 7000                 | 
+| Bombillo / resistencia           | 1       | 10000                | 
+| Ventilador 12v                   | 1       | 8000                 | 
+| Fuente de alimentación           | 1       | 15000                | 
+| Material estructural             | 1       | 20000                |
+| Galga 5kg                        | 1       | 11000                |
+| **TOTAL**                        |         | **134.500**           | 
+
+En contraste, las incubadoras neonatales comerciales presentan costos significativamente más elevados, como se muestra en la siguiente tabla, donde se comparan diferentes fabricantes reconocidos en el sector, estas diferencias de precio se deben a la integración de tecnologías más avanzadas, mayor precisión en los sensores, sistemas de control sofisticados y cumplimiento de normativas médicas.
+
+| Marca                     | Tipo de equipo        | Rango de precio aproximado |
+|--------------------------|---------------------|---------------------------|
+| Dräger                   | Alta gama            | 6 – 80+ millones COP      |
+| Instrumentalia S.A.S.    | Distribuidor clínico | 20 – 60 millones COP      |
+| LEEX Medical             | Gama media           | 10 – 40 millones COP      |
+| GE Healthcare            | Alta gama            | 15 – 70 millones COP      |
+| Atom Medical             | Gama media-alta      | 12 – 50 millones COP      |
+| **Prototipo desarrollado** | Bajo costo           | **~134.500 COP**          |
+
+De esta manera, al comparar directamente las características del sistema desarrollado con las incubadoras comerciales, se observa que, aunque el prototipo cumple con funciones básicas como el control de temperatura y medición de peso, existen diferencias importantes en términos de precisión, seguridad y capacidades de monitoreo. Como se muestra en la siguiente tabla, los equipos comerciales incorporan múltiples variables fisiológicas, sistemas de control avanzados y certificaciones que garantizan su uso en entornos clínicos, mientras que el prototipo se limita a aplicaciones educativas o de investigación.
+
+| Característica            | Prototipo desarrollado        | Incubadora comercial                      |
+|--------------------------|------------------------------|------------------------------------------|
+| Costo                    | ~155.000 COP                 | 7 – 30+ millones COP                     |
+| Precisión                | Media / baja                 | Alta                                     |
+| Tipo de control          | ON/OFF básico                | PID avanzado                             |
+| Variables controladas    | Temperatura y peso           | Temp, humedad, O₂, signos vitales        |
+| Seguridad                | Básica                       | Alta (alarmas, redundancia)              |
+| Certificación médica     | No                           | Sí                                       |
+
+El análisis de costos y características permite evidenciar una alta diferencia entre el prototipo desarrollado y las incubadoras neonatales comerciales, esta brecha económica se justifica por la incorporación, en los dispositivos comerciales, de sensores de alta precisión, sistemas de control avanzados como PID, monitoreo de múltiples variables fisiológicas y estrictos estándares de seguridad y certificación médica. 
+
+En contraste, el prototipo desarrollado ofrece una solución funcional básica, capaz de controlar la temperatura y medir el peso, lo que lo hace adecuado para fines académicos y de investigación, in embargo carece de la robustez, confiabilidad y seguridad necesarias para su implementación en entornos clínicos.
 
 ## Respuesta a las preguntas
 - Pregunta 1: ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal?
