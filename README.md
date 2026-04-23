@@ -1,7 +1,7 @@
 # INCUBADORA-NEONATAL
 Sara Damaris Vasquez Cardenas y Paula Andrea Vega Pardo
 
-# Descripción
+## Descripción
 Este proyecto consiste en el desarrollo de un prototipo de incubadora neonatal de bajo costo, diseñado para controlar variables básicas como la temperatura y el peso, utilizando un sistema basado en ESP32, sensores y actuadores electrónicos
 
 ## Procedimiento 
@@ -107,4 +107,20 @@ void loop() {
 De esta misma manera se permitió la visualización de la temperatura en forma real mediante una pantalla OLED de 3 segmentos y se implemetaron dos LEDs comosistema de alerta sobre el estado de la incubadora, en caso de estar por encimma o debajo del rango de la temperatura ideal se enciende el led rojo y por el contrario al encontrarse en el rango se encenderá el led verde.
 
 ## Respuesta a las preguntas
+- Pregunta 1: ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal?
+Otras variables críticas que podemos ecnotrar en el monitoreo neonatal incluyen la humedad relativa, la cual es fundamental porque los neonatos, especialmente los prematuros, presentan una piel inmadura y una alta relación superficie/volumen, lo que favorece una pérdida excesiva de agua por evaporación y puede llevar rápidamente a deshidratación y alteraciones electrolíticas.
+
+Por otra parte se ecnuentra la saturación de oxígeno (SpO₂), que permite evaluar la adecuada oxigenación de la hemoglobina, siendo crucial ya que el sistema respiratorio del neonato es inmaduro y una baja oxigenación puede comprometer directamente la función celular y el metabolismo tisular.
+
+Además la frecuencia cardíaca, que refleja el estado hemodinámico y la capacidad del sistema cardiovascular para mantener una perfusión adecuada de los órganos, siendo especialmente importante porque el control autónomo del corazón aún no está completamente desarrollado.
+
+La frecuencia respiratoria, que permite evaluar la eficiencia del intercambio gaseoso, ya que los pulmones del neonato, en particular en prematuros, pueden no estar completamente desarrollados, lo que aumenta el riesgo de dificultad respiratoria.
+
+El fallo ed cualqueira de estas variables estaría comprometiendo la estabilidad del neonato.
+
+- Pregunta 2: ¿Qué haría falta para convertir el sistema desarrollado en una incubadora neonatal real?
+Para convertir el sistema desarrollado en una incubadora neonatal real sería necesario incorporar sensores médicos de alta precisión, sistemas de control más avanzados (control proporcional / uso de PID) y mecanismos de seguridad y alarmas confiables. Además, se requeriría integrar el control de variables como humedad y oxígeno, así como cumplir con normativas y certificaciones médicas que garanticen el uso seguro en entornos clínicos, mejorando así la precisión, confiabilidad y seguridad del sistema.
+
+- Pregunta 3: ¿Qué semejanzas hay entre una incubadora neonatal y una servo-cuna?
+La incubadora neonatal y la servo-cuna tienen en común que ambas buscan regular la temperatura del recién nacido mediante sistemas de control automático basados en sensores. Sin embargo, la principal diferencia es que la incubadora controla un ambiente cerrado (incluyendo temperatura, humedad y aislamiento), mientras que la servo-cuna es un sistema abierto que utiliza calor radiante para mantener la temperatura corporal del neonato.
   
