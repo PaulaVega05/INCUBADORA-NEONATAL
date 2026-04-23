@@ -156,6 +156,9 @@ Para la implementación del sistema de medición de peso, se utilizó una celda 
 
 Se realizó la conexión del módulo al microcontrolador y se implementó un proceso de calibración mediante un factor experimental. Además, se integró una pantalla OLED para visualizar el peso en tiempo real, mostrando los valores tanto en el monitor serial como en la pantalla. El código permite realizar múltiples lecturas y promediarlas con el fin de reducir el ruido en la señal.
 
+<img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/c04d82ac-863f-4341-b1ab-ec954cb72761" />
+
+
 Sin embargo, durante las pruebas del sistema, no se lograron obtener mediciones correctas, ya que el valor de peso permanecía constante en cero independientemente de la carga aplicada. Esto indica que el sistema no funcionó adecuadamente, posiblemente debido a errores en la conexión, problemas en la calibración o una mala distribución de la carga.
 
 El siguiente código corresponde a la implementación realizada para la lectura y visualización del peso:
