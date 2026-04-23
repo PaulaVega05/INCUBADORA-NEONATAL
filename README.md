@@ -4,18 +4,19 @@ Sara Damaris Vasquez Cardenas y Paula Andrea Vega Pardo
 # Descripción
 Este proyecto consiste en el desarrollo de un prototipo de incubadora neonatal de bajo costo, diseñado para controlar variables básicas como la temperatura y el peso, utilizando un sistema basado en ESP32, sensores y actuadores electrónicos
 
-# Procedimiento 
+## Procedimiento 
 - Diseño del sistema
-Primero se definieron las variables a controlar: Temperatura y peso, poteriormente se seleccionaron los componentes electrónicos necesarios como el ESP32, sensor de temperatura, módulo HX711, relé y sistema de calefacción.
+Primero se definieron las variables a controlar: Temperatura y peso, poteriormente se seleccionaron los componentes electrónicos necesarios como el ESP32, termistor, módulo HX711, relé, sistema de calefacción y gálga extensiométrica.
 
-- Conexión de hardware
+- Conexión de hardware / Temperatura 
 Para relaizar el montaje del controlador de temperatura, se hizo uso del siguiente circuito:
 
 <img width="855" height="426" alt="TEMP" src="https://github.com/user-attachments/assets/eac8b0c4-ed5c-436b-baba-283695897d28" />
 
 De esta manera, se buscó mantener una temperatura estable entre 36 °C y 37.5 °C mediante el uso de dos relés, los cuales controlan el encendido y apagado del ventilador y del bombillo en función de la temperatura detectada por el sensor. Todo este proceso fue gestionado por un microcontrolador, que a través del siguiente código determina el estado de los actuadores y permite regular el sistema de forma automática perimitiendo un sistema de control automática de temperatura tipo ON/OFF.
 
-``` #include <Wire.h>
+```
+#include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <math.h>
@@ -103,7 +104,7 @@ void loop() {
 }
 ```
 
-De esta misma manera se permitió la visualización de la temperatura en forma real mediante una pantalla OLED de 3 segmentos y se implemetaron dos leds como alarma para alertar sobre el estado de la incubadora, en caso de estar por encimma o debajo del rango de la temperatura ideal se enciende el led rojo y por el contrario al encontrarse en el rango se encerá el led verde.
+De esta misma manera se permitió la visualización de la temperatura en forma real mediante una pantalla OLED de 3 segmentos y se implemetaron dos LEDs comosistema de alerta sobre el estado de la incubadora, en caso de estar por encimma o debajo del rango de la temperatura ideal se enciende el led rojo y por el contrario al encontrarse en el rango se encenderá el led verde.
 
-
+## Respuesta a las preguntas
   
