@@ -40,6 +40,10 @@ Adicionalmente, se consideró el diseño mecánico del sistema, incluyendo una e
 
 ### Parte mecánica
 
+<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/47047507-e59f-4b03-a149-65ed5fe5c0c2" />
+<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/471d3b9c-870e-4f4f-92b8-9574f1076795" />
+
+
 #### Conexión de hardware / Temperatura 
 
 Para realizar el montaje del controlador de temperatura, se hizo uso del siguiente circuito:
@@ -143,11 +147,72 @@ De esta misma manera se permitió la visualización de la temperatura en forma r
 
 Para la implementación del sistema de medición de peso, se utilizó una celda de carga (galga extensiométrica) de 5 kg en conjunto con el módulo amplificador HX711, con el objetivo de monitorear el peso del neonato dentro de la incubadora. Este sistema se basa en la deformación de la galga al aplicar una carga, generando una señal eléctrica muy pequeña que es amplificada por el módulo HX711 para ser leída por el microcontrolador a través de pines digitales.
 
+<img width="1140" height="451" alt="image" src="https://github.com/user-attachments/assets/c9b117aa-4654-4aca-8337-bc72313f9b41" />
+<img width="1598" height="984" alt="image" src="https://github.com/user-attachments/assets/8ec8b3d7-4c28-4cbd-949e-a7e8c28e0e01" />
+
 Se realizó la conexión del módulo al microcontrolador y se implementó un proceso de calibración mediante un factor experimental. Además, se integró una pantalla OLED para visualizar el peso en tiempo real, mostrando los valores tanto en el monitor serial como en la pantalla. El código permite realizar múltiples lecturas y promediarlas con el fin de reducir el ruido en la señal.
 
 Sin embargo, durante las pruebas del sistema, no se lograron obtener mediciones correctas, ya que el valor de peso permanecía constante en cero independientemente de la carga aplicada. Esto indica que el sistema no funcionó adecuadamente, posiblemente debido a errores en la conexión, problemas en la calibración o una mala distribución de la carga.
 
 El siguiente código corresponde a la implementación realizada para la lectura y visualización del peso:
+```
+#include <HX711.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define DT  4
+#define SCK 5
+
+HX711 scale;
+
+// OLED
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+float factor_calibracion = -6890; // usa el que encontraste
+
+void setup() {
+  Serial.begin(115200);
+
+  // HX711
+  scale.begin(DT, SCK);
+  scale.set_scale(factor_calibracion);
+  scale.tare();
+
+  // OLED
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println("Error OLED");
+    while (true);
+  }
+
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+}
+
+void loop() {
+  float peso = scale.get_units(10);
+
+  Serial.print("Peso: ");
+  Serial.println(peso);
+
+  // Mostrar en OLED
+  display.clearDisplay();
+  display.setCursor(0, 10);
+  display.print("Peso:");
+
+  display.setCursor(0, 35);
+  display.print(peso, 1);
+  display.print(" g");
+
+  display.display();
+
+  delay(500);
+}
+```
+
 
 
 ## Costos del sistema y comparación con soluciones comerciales
