@@ -267,11 +267,18 @@ En contraste, el prototipo desarrollado ofrece una solución funcional básica, 
 
 ## Resultados y conclusión
 
-El resultado obtenido indica que el sistema de medición de peso funciona correctamente cuando se evalúa de manera independiente; sin embargo, al integrarlo dentro de la estructura de la incubadora no se obtuvieron resultados adecuados, lo que evidencia la necesidad de mejorar la parte mecánica del sistema, especialmente en aspectos como el soporte, la distribución de la carga y el acoplamiento de la celda de carga.
+El resultado obtenido indica que el sistema de medición de peso no presentó un funcionamiento adecuado, ya que durante las pruebas el valor registrado permanecía constante en cero, incluso al aplicar carga. Este comportamiento sugiere fallas en la implementación del sistema, las cuales pueden estar asociadas a problemas en las conexiones, en el proceso de calibración o, principalmente, en el montaje mecánico de la celda de carga. En este sentido, se evidencia la necesidad de mejorar aspectos como el soporte, la correcta transmisión de la fuerza, la distribución de la carga y el acoplamiento de la galga, con el fin de lograr una deformación efectiva del sensor y obtener mediciones confiables.
 
 En cuanto al control de temperatura, se evidenciaron inconvenientes asociados al módulo relé, lo que sugiere la necesidad de optimizar este componente para garantizar un accionamiento más estable del sistema de calefacción. 
 
 No obstante, el resto del sistema mostró un comportamiento satisfactorio, ya que tanto el sensor de temperatura, como el sistema de alarmas y la pantalla OLED, funcionaron correctamente, permitiendo el monitoreo y la visualización adecuada de las variables.
+
+## Moraleja
+A partir de los resultados obtenidos, se puede concluir que el desarrollo de este sistema evidencia la importancia de no solo diseñar correctamente la parte electrónica y de control, sino también de prestar especial atención a la integración mecánica. En este caso, los inconvenientes presentados en la medición de peso y en el accionamiento del relé muestran que pequeños detalles en el montaje, las conexiones o la selección de componentes pueden afectar significativamente el desempeño global del sistema.
+
+Como mejora, se propone optimizar el diseño mecánico de la celda de carga, asegurando una correcta transmisión de la fuerza y un montaje más rígido y alineado, además de revisar detalladamente las conexiones y el proceso de calibración. Asimismo, es necesario evaluar el módulo de relé utilizado o su forma de conexión, con el fin de garantizar un funcionamiento estable del sistema de calefacción.
+
+En general, este proyecto deja como aprendizaje que el desarrollo de sistemas embebidos requiere un enfoque integral, donde la electrónica, la programación y la mecánica deben trabajar de manera conjunta para lograr resultados confiables y funcionales.
 
 ## Respuesta a las preguntas
 - Pregunta 1: ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal?
