@@ -214,3 +214,18 @@ La incubadora neonatal y la servo-cuna tienen en común que ambas buscan regular
 
 Sin embargo, la diferencia principal radica en el tipo de control térmico y el entorno: la incubadora neonatal es un sistema cerrado que regula no solo la temperatura, sino también la humedad y el aislamiento del ambiente, reduciendo la pérdida de calor por convección, evaporación y radiación; mientras que la servo-cuna es un sistema abierto que utiliza calor radiante dirigido al neonato, permitiendo un acceso más fácil para intervenciones médicas, pero con menor control sobre variables ambientales como la humedad.
   
+## REFERENCIAS 
+Udocz. (2023). Incubadora neonatal.
+https://www.udocz.com/apuntes/609413/incubadora-neonatal
+
+Organización Mundial de la Salud. (2016). Manual de atención neonatal.
+https://platform.who.int/docs/default-source/mca-documents/policy-documents/operational-guidance/pry-mn-48-03-operational-guidance-2016-esp-manual-de-atenci%C3%93n-neonatal--autorizado-mspbs-resoluci%C3%93n-ministerial-sg-n-816.pdf
+
+Universidad Dr. Rafael Belloso Chacín. (2010). Sistema de control de temperatura, monitoreo de peso y humedad en incubadoras neonatales.
+https://virtual.urbe.edu/tesispub/0091333/intro.pdf
+
+Universidad Wiener. (2019). Incubadoras neonatales y control térmico.
+https://repositorio.uwiener.edu.pe/bitstreams/c8ab8b70-7e2b-4a1f-8b2e-2c961d749436/download
+
+Universitat Politècnica de Catalunya. (2013). Desarrollo histórico de incubadoras neonatales.
+https://www.tdx.cat/bitstream/handle/10803/131097/TECJ.pdf
