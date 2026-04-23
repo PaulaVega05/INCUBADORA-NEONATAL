@@ -184,6 +184,14 @@ El análisis de costos y características permite evidenciar una alta diferencia
 
 En contraste, el prototipo desarrollado ofrece una solución funcional básica, capaz de controlar la temperatura y medir el peso, lo que lo hace adecuado para fines académicos y de investigación, in embargo carece de la robustez, confiabilidad y seguridad necesarias para su implementación en entornos clínicos.
 
+## Resultados y conclusión
+
+El resultado obtenido indica que el sistema de medición de peso funciona correctamente cuando se evalúa de manera independiente; sin embargo, al integrarlo dentro de la estructura de la incubadora no se obtuvieron resultados adecuados, lo que evidencia la necesidad de mejorar la parte mecánica del sistema, especialmente en aspectos como el soporte, la distribución de la carga y el acoplamiento de la celda de carga.
+
+En cuanto al control de temperatura, se evidenciaron inconvenientes asociados al módulo relé, lo que sugiere la necesidad de optimizar este componente para garantizar un accionamiento más estable del sistema de calefacción. 
+
+No obstante, el resto del sistema mostró un comportamiento satisfactorio, ya que tanto el sensor de temperatura, como el sistema de alarmas y la pantalla OLED, funcionaron correctamente, permitiendo el monitoreo y la visualización adecuada de las variables.
+
 ## Respuesta a las preguntas
 - Pregunta 1: ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal?
   
