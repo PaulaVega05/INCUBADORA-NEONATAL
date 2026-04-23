@@ -36,7 +36,7 @@ En la Figura 2 se presenta el esquema del sistema electrónico implementado, don
 
 ### Diseño del sistema
 
-Adicionalmente, se consideró el diseño mecánico del sistema, incluyendo una estructura básica que simula el funcionamiento de una incubadora neonatal, utilizando materiales como plástico o acetato para representar la cabina, también se tuvo en cuenta el soporte de la celda de carga y la disposición de los componentes, buscando lograr una adecuada estabilidad, distribución del calor y medición del peso. Cabe resaltar que se trata de una simulación funcional, en la cual se procuró implementar el sistema de la mejor manera posible con los recursos disponibles.
+Adicionalmente, se consideró el diseño mecánico del sistema, incluyendo una estructura básica que simula el funcionamiento de una incubadora neonatal, utilizando materiales como carton-plástico y vinilo para representar la cabina, también se tuvo en cuenta el soporte de la celda de carga y la disposición de los componentes, buscando lograr una adecuada estabilidad, distribución del calor y medición del peso. Cabe resaltar que se trata de una simulación funcional, en la cual se procuró implementar el sistema de la mejor manera posible con los recursos disponibles.
 
 ### Parte mecánica
 
@@ -140,6 +140,15 @@ void loop() {
 De esta misma manera se permitió la visualización de la temperatura en forma real mediante una pantalla OLED de 3 segmentos y se implemetaron dos LEDs comosistema de alerta sobre el estado de la incubadora, en caso de estar por encimma o debajo del rango de la temperatura ideal se enciende el led rojo y por el contrario al encontrarse en el rango se encenderá el led verde.
 
 #### Conexión de hardware / Peso 
+
+Para la implementación del sistema de medición de peso, se utilizó una celda de carga (galga extensiométrica) de 5 kg en conjunto con el módulo amplificador HX711, con el objetivo de monitorear el peso del neonato dentro de la incubadora. Este sistema se basa en la deformación de la galga al aplicar una carga, generando una señal eléctrica muy pequeña que es amplificada por el módulo HX711 para ser leída por el microcontrolador a través de pines digitales.
+
+Se realizó la conexión del módulo al microcontrolador y se implementó un proceso de calibración mediante un factor experimental. Además, se integró una pantalla OLED para visualizar el peso en tiempo real, mostrando los valores tanto en el monitor serial como en la pantalla. El código permite realizar múltiples lecturas y promediarlas con el fin de reducir el ruido en la señal.
+
+Sin embargo, durante las pruebas del sistema, no se lograron obtener mediciones correctas, ya que el valor de peso permanecía constante en cero independientemente de la carga aplicada. Esto indica que el sistema no funcionó adecuadamente, posiblemente debido a errores en la conexión, problemas en la calibración o una mala distribución de la carga.
+
+El siguiente código corresponde a la implementación realizada para la lectura y visualización del peso:
+
 
 ## Costos del sistema y comparación con soluciones comerciales
 El sistema desarrollado presenta un costo considerablemente bajo en comparación con las incubadoras neonatales comerciales. A continuación, se detalla el costo aproximado de cada uno de los componentes utilizados en el prototipo:
