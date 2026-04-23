@@ -123,7 +123,11 @@ El fallo de cualquiera de estas variables estaría comprometiendo la estabilidad
 
 - Pregunta 2: ¿Qué haría falta para convertir el sistema desarrollado en una incubadora neonatal real?
   
-Para convertir el sistema desarrollado en una incubadora neonatal real sería necesario incorporar sensores médicos de alta precisión, sistemas de control más avanzados (control proporcional / uso de PID) y mecanismos de seguridad y alarmas confiables. Además, se requeriría integrar el control de variables como humedad y oxígeno, así como cumplir con normativas y certificaciones médicas que garanticen el uso seguro en entornos clínicos, mejorando así la precisión, confiabilidad y seguridad del sistema.
+Para convertir el sistema desarrollado en una incubadora neonatal real sería necesario incorporar sensores médicos de alta precisión y calibración certificada, así como implementar sistemas de control más avanzados, como control proporcional o control PID, que permitan una regulación más estable y sin sobreoscilaciones. Además, se deben incluir sistemas de seguridad redundantes, como alarmas auditivas y visuales ante fallos, sobretemperatura o pérdida de energía, así como respaldo eléctrico.
+
+También sería necesario integrar el control de variables adicionales como la humedad y la concentración de oxígeno, fundamentales para el bienestar del neonato, y diseñar una estructura física adecuada, con aislamiento térmico, filtrado de aire y materiales biocompatibles que garanticen condiciones higiénicas.
+
+Finalmente, el sistema debe cumplir con normativas y certificaciones médicas internacionales, lo cual implica pruebas rigurosas de seguridad, confiabilidad y desempeño clínico, asegurando así su uso seguro en entornos hospitalarios.
 
 - Pregunta 3: ¿Qué semejanzas hay entre una incubadora neonatal y una servo-cuna?
   
