@@ -11,7 +11,7 @@ Primero se definieron las variables a controlar: Temperatura y peso, poteriormen
 
 #### Conexión de hardware / Temperatura 
 
-Para relaizar el montaje del controlador de temperatura, se hizo uso del siguiente circuito:
+Para realizar el montaje del controlador de temperatura, se hizo uso del siguiente circuito:
 
 <img width="855" height="426" alt="TEMP" src="https://github.com/user-attachments/assets/eac8b0c4-ed5c-436b-baba-283695897d28" />
 
