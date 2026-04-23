@@ -1,9 +1,6 @@
 # INCUBADORA-NEONATAL
 Sara Damaris Vasquez Cardenas y Paula Andrea Vega Pardo
 
-## Descripción
-
-
 ## Marco teórico 
 ### Partes externas / estructura
 Las incubadoras neonatales son equipos médicos diseñados para proporcionar un ambiente controlado que permita mantener condiciones óptimas para el desarrollo y estabilidad del recién nacido, especialmente en casos de prematuridad; estos sistemas están conformados por varios subsistemas que trabajan de manera integrada para garantizar el control térmico, la protección del neonato y el monitoreo continuo de sus condiciones.
